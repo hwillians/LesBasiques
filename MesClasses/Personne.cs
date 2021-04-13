@@ -18,5 +18,5 @@ namespace MesClasses
         {
             return $"{Prenom} {Nom} {DateNaissance.ToString("dd/MM/yyyy")}";
         }
-    }
+            }
 }
