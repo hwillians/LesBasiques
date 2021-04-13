@@ -1,0 +1,12 @@
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\bin\Debug\net5.0\MesClasses.deps.json
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\bin\Debug\net5.0\MesClasses.dll
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\bin\Debug\net5.0\ref\MesClasses.dll
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\bin\Debug\net5.0\MesClasses.pdb
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\obj\Debug\net5.0\MesClasses.csprojAssemblyReference.cache
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\obj\Debug\net5.0\MesClasses.GeneratedMSBuildEditorConfig.editorconfig
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\obj\Debug\net5.0\MesClasses.AssemblyInfoInputs.cache
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\obj\Debug\net5.0\MesClasses.AssemblyInfo.cs
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\obj\Debug\net5.0\MesClasses.csproj.CoreCompileInputs.cache
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\obj\Debug\net5.0\MesClasses.dll
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\obj\Debug\net5.0\ref\MesClasses.dll
+E:\Diginamic\Csharp\TPs\LesBasiques\MesClasses\obj\Debug\net5.0\MesClasses.pdb

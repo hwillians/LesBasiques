@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Exercices/1.0.0": {
+        "dependencies": {
+          "MesClasses": "1.0.0"
+        },
+        "runtime": {
+          "Exercices.dll": {}
+        }
+      },
+      "MesClasses/1.0.0": {
+        "runtime": {
+          "MesClasses.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Exercices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MesClasses/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
