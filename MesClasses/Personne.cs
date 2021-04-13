@@ -2,7 +2,7 @@
 
 namespace MesClasses
 {
-    public class Personne
+    public class Personne 
     {
         public string Nom { get; set; }
         public string Prenom { get; set; }
