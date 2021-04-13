@@ -8,6 +8,6 @@ namespace MesClasses
 {
     interface ITravailleur
     {
-        string ITravailleur();
+        string Afficher();
     }
 }
