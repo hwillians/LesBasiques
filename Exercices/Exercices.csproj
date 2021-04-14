@@ -9,8 +9,4 @@
     <ProjectReference Include="..\MesClasses\MesClasses.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Exos\" />
-  </ItemGroup>
-
 </Project>

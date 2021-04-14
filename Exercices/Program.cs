@@ -1,7 +1,7 @@
 ﻿using MesClasses;
-using static MesClasses.LesBasiques.outils;
+using static MesClasses.Autres.Outils;
 using System;
-using MesClasses.LesBasiques;
+using MesClasses.Exos;
 
 namespace Exercices
 {
