@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MesClasses
 {
-    interface ITravailleur
+    public interface ITravailleur
     {
         string Afficher();
     }
