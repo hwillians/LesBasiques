@@ -56,8 +56,10 @@ namespace MesClasses
                     case "l02": ExoL02(); break;
                     case "l03": ExoL03(); break;
                     case "l04": ExoL04(); break;
-
-
+                    case "l05": ExoL05(); break;
+                    case "l06": ExoL06(); break;
+                    case "l07": ExoL07(); break;
+                    case "l08": ExoL08(); break;
                     // case "300": Morpion(); break;
                     case "00": Console.WriteLine("à bientôt..."); break;
                     default: Console.WriteLine("Esseyez un autre exercices"); break;
