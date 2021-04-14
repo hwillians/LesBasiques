@@ -44,7 +44,7 @@ namespace MesClasses.LesBasiques
                     case "28": Exo28(); break;
                     case "29": Exo29(); break;
                     case "30": Exo30(); break;
-                    case "300": Morpion(); break;
+                   // case "300": Morpion(); break;
                     case "00": Console.WriteLine("à bientôt..."); break;
                     default: Console.WriteLine("Esseyez un autre exercices"); break;
                 }

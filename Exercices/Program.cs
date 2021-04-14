@@ -1,6 +1,7 @@
 ﻿using MesClasses;
 using static MesClasses.LesBasiques.outils;
 using System;
+using MesClasses.LesBasiques;
 
 namespace Exercices
 {
@@ -9,7 +10,7 @@ namespace Exercices
         static void Main(string[] args)
         {
 
-            //  Menu.Liste();
+              Menu.Liste();
 
             /*     Personne personne1 = new Personne(
                       GetString("Tapez le nom : "),

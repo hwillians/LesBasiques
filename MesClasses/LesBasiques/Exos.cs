@@ -1,5 +1,6 @@
 ﻿using System;
 using static MesClasses.LesBasiques.outils;
+using static System.Console;
 
 namespace MesClasses.LesBasiques
 {
@@ -9,24 +10,18 @@ namespace MesClasses.LesBasiques
         //1. Affichez « Hello » et « World » sur 2 lignes séparés
         public static void Exo1()
         {
-            Console.WriteLine("Hello\nWorld!");
+            WriteLine("Hello\nWorld!");
         }
 
         //10. Savoir si le nombre donné est pair ou impair
-        public static void Exo10()
-        {
-            Console.WriteLine(GetInt("Tapez un nombre : ") % 2 == 0 ? "Ce nombre est pair" : "Ce nombre est impair");
-        }
+        public static void Exo10() => WriteLine(GetInt("Tapez un nombre : ") % 2 == 0 ? "Ce nombre est pair" : "Ce nombre est impair");
 
 
         //11. Rentrez un nombre en Celsius et le convertir en Kelvin et Fahrenheit
         public static void Exo11()
         {
-            var temp = GetInt("Tapez la temperature en Celsius : ");
-            var kelvin = temp + 273.15;
-            var fahrenheit = 9 * temp / 5 + 32;
-
-            Console.WriteLine($"{temp}°C equivaut à {kelvin}°K et à {fahrenheit}°F");
+            var celsius = GetInt("Tapez la temperature en Celsius : ");
+            WriteLine("{0}°C equivaut à {1}°K et à {2}°F", celsius, celsius + 273.15, 9 * (double)celsius / 5 + 32);
         }
 
         //12. Rentrez un chiffre et dire de quel jour il s’agit sous forme de texte
@@ -44,9 +39,9 @@ namespace MesClasses.LesBasiques
                 case 5: dayOfWeek = "Vendredi"; break;
                 case 6: dayOfWeek = "Samedi"; break;
                 case 7: dayOfWeek = "Dimanche"; break;
-                default: Console.WriteLine("Aucun jour de la semaine corresponde à ce chiffre"); break;
+                default: WriteLine("Aucun jour de la semaine corresponde à ce chiffre"); break;
             }
-            Console.WriteLine(dayOfWeek);
+            WriteLine(dayOfWeek);
         }
 
         //13. Bloquez un utilisateur après avoir rentré 3 faux password
@@ -58,13 +53,13 @@ namespace MesClasses.LesBasiques
                 var password = GetString("Rentrez votre mot de passe SVP : ");
                 if (mdp != password)
                 {
-                    Console.WriteLine("Mot de passe incorrect");
+                    WriteLine("Mot de passe incorrect");
                     temoin++;
                 }
                 else break;
 
             }
-            Console.WriteLine(temoin < 3 ? "Bienvenue" : "Vous êtez bloqué");
+            WriteLine(temoin < 3 ? "Bienvenue" : "Vous êtez bloqué");
         }
 
         //14. Rentrez un nombre, puis un signe(+ - * /), puis un autre nombre, affichez ensuite le résultat
@@ -86,7 +81,7 @@ namespace MesClasses.LesBasiques
                 case "*": resultat = nombre1 * nombre2; break;
                 case "/": resultat = (double)nombre1 / nombre2; break;
             }
-            Console.WriteLine(nombre2 == 0 && opp == "/" ? "Erreur ! : Division par Zero"
+            WriteLine(nombre2 == 0 && opp == "/" ? "Erreur ! : Division par Zero"
                 : $"Le resultat de votre operation est : {resultat}");
         }
 
@@ -94,7 +89,7 @@ namespace MesClasses.LesBasiques
         //15. Afficher les 10 premiers chiffres à partir de 0 (avec une boucle for)
         public static void Exo15()
         {
-            for (int i = 0; i < 10; i++) Console.WriteLine(i);
+            for (int i = 0; i < 10; i++) WriteLine(i);
         }
 
         //16. Donnez la table de multiplication des 10 premiers chiffres
@@ -102,7 +97,7 @@ namespace MesClasses.LesBasiques
         {
             for (int i = 0; i < 10; i++)
             {
-                for (int j = 0; j < 10; j++) Console.WriteLine($"{i} x {j} = {i * j}");
+                for (int j = 0; j < 10; j++) WriteLine($"{i} x {j} = {i * j}");
             }
         }
 
@@ -120,7 +115,7 @@ namespace MesClasses.LesBasiques
                     ligne += lettre;
                     tailleLigne++;
                 }
-                Console.WriteLine(ligne);
+                WriteLine(ligne);
             }
         }
 
@@ -145,7 +140,7 @@ namespace MesClasses.LesBasiques
                     tailleLigne++;
                 }
 
-                Console.WriteLine(tab + ligne);
+                WriteLine(tab + ligne);
             }
         }
         //19. Faire un diamant d’une hauteur donnée
@@ -184,13 +179,13 @@ namespace MesClasses.LesBasiques
                         tailleLigne++;
                     }
                 }
-                Console.WriteLine(tab + ligne);
+                WriteLine(tab + ligne);
             }
         }
         //20. Créez la date d’aujourd’hui et affichez-la de façon complète puis de façon jour/mois/année)
         public static void Exo20()
         {
-            Console.WriteLine($"{DateTime.Now}\n{DateTime.Now.ToString("dd/MM/yyyy")}");
+            WriteLine($"{DateTime.Now}\n{DateTime.Now.ToString("dd/MM/yyyy")}");
         }
 
         /*21. Créer une date avec l’utilisateur qui rentre l’année, mois, jour, heure, minute et seconde et
@@ -205,21 +200,21 @@ namespace MesClasses.LesBasiques
             var seconde = GetInt("Tapez le seconde : ");
 
             DateTime date = new DateTime(annee, mois, jour, heure, minute, seconde);
-            Console.WriteLine(date.DayOfWeek);
+            WriteLine(date.DayOfWeek);
         }
 
         //22. Affichez la différence de temps entre 2 dates
         public static void Exo22()
         {
             DateTime date = new DateTime(1986, 01, 14);
-            Console.WriteLine($"{(DateTime.Now - date).TotalDays} jours de difference");
+            WriteLine($"{(DateTime.Now - date).TotalDays} jours de difference");
         }
         //23. Convertir une chaine de caractère en date
         public static void Exo23()
         {
-            Console.WriteLine(StringToDate());
+            WriteLine(StringToDate());
         }
-                
+
         /*24. Jeu du plus ou moins(un nombre est définit par défaut, puis l’utilisateur rentre un chiffre et
         le programme lui dit si le bon nombre est + ou – que celui définit jusqu’à que l’utilisateur
         trouve)*/
@@ -232,13 +227,13 @@ namespace MesClasses.LesBasiques
             {
                 nombre = GetInt(nombre < nombreDefinit ? "C'est plus : " : "C'est moins : ");
             }
-            Console.WriteLine($"Vouz avez deniné le nombre : {nombre}.");
+            WriteLine($"Vouz avez deniné le nombre : {nombre}.");
         }
 
         //25. Affichez une chaine donnée en majuscule
         public static void Exo25()
         {
-            Console.WriteLine(GetString("Tapez : ").ToUpper());
+            WriteLine(GetString("Tapez : ").ToUpper());
         }
 
         //26. Affichez le nombre de caractère d’une chaine sans utiliser la propriété Length
@@ -246,7 +241,7 @@ namespace MesClasses.LesBasiques
         {
             int val = 0;
             foreach (var item in GetString()) val++;
-            Console.WriteLine(val);
+            WriteLine(val);
         }
 
         //27. Affichez un espace entre toute les lettres d’une chaine de caractère donnée en inversant les
@@ -255,13 +250,14 @@ namespace MesClasses.LesBasiques
         {
             var chaine = "";
             foreach (var item in GetString()) chaine = item + " " + chaine;
-            Console.WriteLine(chaine.ToUpper());
+            WriteLine(chaine.ToUpper());
         }
 
         //28. Dire si une chaine est égale à une autre sans prendre en compte la casse
         public static void Exo28()
         {
-            Console.WriteLine(GetString("Premier text : ").ToLower() == GetString("Deuxieme text : ").ToLower()
+
+            WriteLine(string.Compare(GetString("Premier text : "), GetString("Deuxieme text : "), true) == 0
                 ? "Les text sont égaux" : "Le text sont différents");
         }
 
@@ -271,20 +267,20 @@ namespace MesClasses.LesBasiques
             var chaine = GetString();
             var chaineInv = "";
             foreach (var item in chaine) chaineInv = item + chaineInv;
-            Console.WriteLine(chaineInv == chaine ? "C'est un palindrome" : "Ce n'est pas un palindrome");
+            WriteLine(chaineInv == chaine ? "C'est un palindrome" : "Ce n'est pas un palindrome");
         }
 
         //3. Faites rentrez 3 mots à l’utilisateur et afficher les dans l’ordre inverse de la saisie
         public static void Exo3()
         {
-            Console.WriteLine("Rentrez 3 mots SVP");
+            WriteLine("Rentrez 3 mots SVP");
             string reponse = "";
 
             for (int i = 0; i < 3; i++)
             {
                 reponse = GetString($"{i + 1}._ ") + " " + reponse;
             }
-            Console.WriteLine($"Vouz avez saisi : {reponse}");
+            WriteLine($"Vouz avez saisi : {reponse}");
         }
 
         /*30. Lister les nombres de 1 à 100, en remplaçant le nombre par un mot selon certaines
@@ -313,7 +309,7 @@ namespace MesClasses.LesBasiques
             {
                 for (int j = 0; j < 10; j++)
                 {
-                    Console.Write(board[i, j] + (j == 9 ? "\n" : " - "));
+                    Write(board[i, j] + (j == 9 ? "\n" : " - "));
                 }
             }
         }
@@ -323,7 +319,7 @@ namespace MesClasses.LesBasiques
         {
             int nombre1, nombre2;
             DeuxNombres(out nombre1, out nombre2);
-            Console.WriteLine(nombre2 == nombre1 ? "Les deux nombres rentrés sont égaux"
+            WriteLine(nombre2 == nombre1 ? "Les deux nombres rentrés sont égaux"
                 : "les deux nombres rentrés sont différents");
         }
 
@@ -332,7 +328,7 @@ namespace MesClasses.LesBasiques
         {
             int nombre1, nombre2;
             DeuxNombres(out nombre1, out nombre2);
-            Console.WriteLine($"{nombre1} - {nombre2}\n{nombre2} - {nombre1}");
+            WriteLine($"{nombre1} - {nombre2}\n{nombre2} - {nombre1}");
         }
 
         /*6. Affichez le résultat de l’ajout, la soustraction, la multiplication et la division de 2 nombres
@@ -341,7 +337,7 @@ namespace MesClasses.LesBasiques
         {
             int nombre1, nombre2;
             DeuxNombres(out nombre1, out nombre2);
-            Console.WriteLine($"Adition = {nombre1 + nombre2} \n" +
+            WriteLine($"Adition = {nombre1 + nombre2} \n" +
                 $"Soustraction = {nombre1 - nombre2} \n" +
                 $"Multiplication = {nombre1 * nombre2} \n" +
                 $"Division = {(nombre2 == 0 ? "Erreur ! : Division par Zero" : (decimal)nombre1 / nombre2)} ");
@@ -351,18 +347,18 @@ namespace MesClasses.LesBasiques
         //7. Affichez la moyenne de 4 nombres rentrés par l’utilisateur
         public static void Exo7(int n = 4)
         {
-            Console.WriteLine($"Tapez {n} nombres pour calculer la moyenne");
+            WriteLine($"Tapez {n} nombres pour calculer la moyenne");
             int add = 0;
 
             for (int i = 0; i < n; i++) add += GetInt($"{1 + i}._ ");
 
-            Console.WriteLine($"La moyenne est : {(decimal)add / n}");
+            WriteLine($"La moyenne est : {(decimal)add / n}");
         }
 
         //8. Affichez le nombre le plus grand de 4 nombres rentrés par l’utilisateur
         public static void Exo8(int n = 4)
         {
-            Console.WriteLine($"Tapez {n} nombres SVP");
+            WriteLine($"Tapez {n} nombres SVP");
             int temoin = int.MinValue;
 
             for (int i = 0; i < n; i++)
@@ -370,13 +366,16 @@ namespace MesClasses.LesBasiques
                 int nombre = GetInt($"{1 + i}._ ");
                 if (nombre > temoin) temoin = nombre;
             }
-            Console.WriteLine($"Le plus grand de {n} nombres est : {temoin}");
+            WriteLine($"Le plus grand de {n} nombres est : {temoin}");
         }
 
         //9. Savoir si le nombre rentré est négatif ou positif
         public static void Exo9()
         {
-            Console.Write(GetInt("Tapez un nombre : ") >= 0 ? "Ce nombre est positif" : "Ce nombre est negatif");
+            var nombre = GetInt("Tapez un nombre : ");
+
+            Write(nombre >= 0 ? (nombre == 0 ? "0" : "Ce nombre est positif")
+                : "Ce nombre est negatif");
         }
 
         //Bonus : Créez le jeu du morpion(Numéro 300 sur la correction)
@@ -395,7 +394,7 @@ namespace MesClasses.LesBasiques
                     tablaux[x - 1, y - 1] = essaie % 2 == 0 ? "X" : "O";
                     essaie++;
                 }
-                for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) Console.Write(tablaux[i, j] + (j == 2 ? "\n" : "|"));
+                for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) Write(tablaux[i, j] + (j == 2 ? "\n" : "|"));
             }
         }
     }
