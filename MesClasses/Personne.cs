@@ -3,7 +3,7 @@ using static MesClasses.LesBasiques.outils;
 
 namespace MesClasses
 {
-    public class Personne : ITravailleur
+    public class Personne : ITravailleur, IEquatable<Personne>, IComparable<Personne>
     {
         public string Nom { get; set; }
         public string Prenom { get; set; }
@@ -27,6 +27,26 @@ namespace MesClasses
         public virtual string Afficher()
         {
             return $"Prenom : {Prenom}, Nom : {Nom}, Date de Naissance : {DateNaissance.ToString("dd/MM/yyyy")}";
+        }
+
+        public override bool Equals(object obj)
+          {
+              if (this == obj) return true;
+              if (!(obj is Personne)) return false;
+              if (Prenom == ((Personne)obj).Prenom 
+                  && Nom == ((Personne)obj).Nom
+                  && DateNaissance.ToShortDateString() == ((Personne)obj).DateNaissance.ToShortDateString()) return true;
+              else return false;
+          }
+    
+        public bool Equals(Personne other)
+        {
+            return other.Nom == Nom && other.Prenom == Prenom;
+        }
+
+        public int CompareTo(Personne p)
+        {
+           return Nom.CompareTo(p.Nom);
         }
     }
 }

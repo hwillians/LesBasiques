@@ -5,9 +5,9 @@ using static MesClasses.LesBasiques.outils;
 
 namespace MesClasses.LesBasiques
 {
-   public static class Menu
+    public static class Menu
     {
-               public static void Liste()
+        public static void Liste()
         {
             var exercices = "";
             while (exercices != "00")
@@ -44,7 +44,14 @@ namespace MesClasses.LesBasiques
                     case "28": Exo28(); break;
                     case "29": Exo29(); break;
                     case "30": Exo30(); break;
-                   // case "300": Morpion(); break;
+                    case "t01": ExoT01(); break;
+                    case "t02": ExoT02(); break;
+                    case "t03": ExoT03(); break;
+                    case "t04": ExoT04(); break;
+                    case "t05": ExoT05(); break;
+                    case "t06": ExoT06(); break;
+
+                    // case "300": Morpion(); break;
                     case "00": Console.WriteLine("à bientôt..."); break;
                     default: Console.WriteLine("Esseyez un autre exercices"); break;
                 }

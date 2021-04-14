@@ -21,7 +21,7 @@ namespace MesClasses
 
         public override string Afficher()
         {
-            return $"Prenom : {Prenom}, Nom : {Nom}, Date de Naissance : {DateNaissance.ToString("dd/MM/yyyy")}, Salaire : {Salaire}";
+            return base.Afficher() + $", Salaire : {Salaire}";
         }
     }
 }

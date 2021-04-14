@@ -26,7 +26,7 @@ namespace Exercices
                  Console.WriteLine(personne2);
                  Console.WriteLine(Personne.Test);*/
 
-            Personne[] tabPersonnes = new Personne[4];
+           /* Personne[] tabPersonnes = new Personne[4];
             tabPersonnes[0] = new Personne("Detal", "Fulano", new DateTime(1900, 04, 14));
             tabPersonnes[1] = new Personne("Rodriguez", "Zutano", new DateTime(1800, 04, 14));
             tabPersonnes[2] = new Employe("Gonzales", "Perensejo", new DateTime(1900, 04, 14), 2000);
@@ -40,7 +40,7 @@ namespace Exercices
             tabTravailleurs[2] = tabPersonnes[2];
             tabTravailleurs[3] = tabPersonnes[3];
 
-            foreach (var travailleur in tabTravailleurs) Console.WriteLine(travailleur.Afficher());
+            foreach (var travailleur in tabTravailleurs) Console.WriteLine(travailleur.Afficher());*/
         }
     }
 }
