@@ -8,8 +8,7 @@ namespace MesClasses
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public DateTime DateNaissance { get; set; }
-        public static string Test { get; set; } = "Ceci est un test";
-
+        public static string Test { get; } = "Ceci est un test";
 
         public Personne(string nom, string prenom, DateTime dateNaissance)
         {
@@ -18,16 +17,11 @@ namespace MesClasses
             DateNaissance = dateNaissance;
         }
 
-        public void MajPrenom()
-        {
-            Prenom = Prenom.ToUpper();
-        }
-
-
+        public void MajPrenom() => Prenom = Prenom.ToUpper();
 
         public override string ToString()
         {
-            return $"{Prenom} {Nom.ToUpper()} {DateNaissance.ToString("dd/MM/yyyy")}";
+            return $"{Prenom} {Nom.ToUpper()} ({DateNaissance.ToString("dd/MM/yyyy")})";
         }
 
         public virtual string Afficher()
