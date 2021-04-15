@@ -71,7 +71,16 @@ namespace MesClasses.Exos
             "Ne contient pas une personne dont le nom commence par D");
 
         //13. Regrouper les personnes par leurs prénoms
-        public static void ExoL13() => WriteLine(String.Join("\n", GetSamplePersonnes().Select(p => p.Prenom)));
+        public static void ExoL13()
+        {
+            var groupe = GetSamplePersonnes().GroupBy(p => p.Prenom);
+
+            foreach (var item in groupe)
+            {
+                WriteLine(item.Key + " : \n" + String.Join("\n", item)+ "\n-.-\n");
+            }
+        }
+
 
     }
 

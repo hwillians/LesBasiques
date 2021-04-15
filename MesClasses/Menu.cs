@@ -1,5 +1,6 @@
 ﻿using System;
 using static MesClasses.Exos.ExosBasiques;
+using static MesClasses.Exos.ExosClasses;
 using static MesClasses.Exos.ExosTables;
 using static MesClasses.Exos.ExosLinq;
 using static MesClasses.Autres.Outils;
@@ -14,10 +15,15 @@ namespace MesClasses
             var exercices = "";
             while (exercices != "00")
             {
-                exercices = GetString("Choisisez le numéro de l'exercices : (00 por sortir) : ");
+                exercices = GetString($"Choisisez le numéro de l'exercices : " +
+                    $"\nde 1 à 36 pour les basiques et les calsses" +
+                    $"\nDe t01 à t06 pour les tables" +
+                    $"\nDe l01 à l13 pour linq" +
+                    $"\n(00 por sortir)");
                 switch (exercices)
                 {
                     case "1": Exo1(); break;
+                    case "2": Exo1(); break;
                     case "3": Exo3(); break;
                     case "4": Exo4(); break;
                     case "5": Exo5(); break;
@@ -46,6 +52,12 @@ namespace MesClasses
                     case "28": Exo28(); break;
                     case "29": Exo29(); break;
                     case "30": Exo30(); break;
+                    case "31": Exo31(); break;
+                    case "32": Exo32(); break;
+                    case "33": Exo33(); break;
+                    case "34": Exo34(); break;
+                    case "35": Exo35(); break;
+                    case "36": Exo36(); break;
                     case "t01": ExoT01(); break;
                     case "t02": ExoT02(); break;
                     case "t03": ExoT03(); break;

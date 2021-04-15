@@ -9,14 +9,11 @@ namespace MesClasses.Exos
     {
 
         //1. Affichez « Hello » et « World » sur 2 lignes séparés
-        public static void Exo1()
-        {
-            WriteLine("Hello\nWorld!");
-        }
-
+        public static void Exo1() =>            WriteLine("Hello\nWorld!");
+        public static void Exo2() =>            WriteLine("2 fonctions ont été créées, une pour récupérer l’entrée utilisateur en chaine de caractère et l’autre pour récupérer un entier.");
+               
         //10. Savoir si le nombre donné est pair ou impair
         public static void Exo10() => WriteLine(GetInt("Tapez un nombre : ") % 2 == 0 ? "Ce nombre est pair" : "Ce nombre est impair");
-
 
         //11. Rentrez un nombre en Celsius et le convertir en Kelvin et Fahrenheit
         public static void Exo11()
