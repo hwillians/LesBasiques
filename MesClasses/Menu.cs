@@ -3,7 +3,9 @@ using static MesClasses.Exos.ExosBasiques;
 using static MesClasses.Exos.ExosClasses;
 using static MesClasses.Exos.ExosTables;
 using static MesClasses.Exos.ExosLinq;
+using static MesClasses.Exos.ExosExceptions;
 using static MesClasses.Autres.Outils;
+
 
 
 namespace MesClasses
@@ -77,6 +79,8 @@ namespace MesClasses
                     case "l11": ExoL11(); break;
                     case "l12": ExoL12(); break;
                     case "l13": ExoL13(); break;
+                    case "e01": ExoE01(); break;
+
                     // case "300": Morpion(); break;
                     case "00": Console.WriteLine("à bientôt..."); break;
                     default: Console.WriteLine("Esseyez un autre exercices"); break;
