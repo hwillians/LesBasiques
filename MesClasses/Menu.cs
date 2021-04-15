@@ -80,6 +80,7 @@ namespace MesClasses
                     case "l12": ExoL12(); break;
                     case "l13": ExoL13(); break;
                     case "e01": ExoE01(); break;
+                    case "e02": ExoE02(); break;
 
                     // case "300": Morpion(); break;
                     case "00": Console.WriteLine("à bientôt..."); break;
