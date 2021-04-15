@@ -75,7 +75,6 @@ namespace MesClasses.Exos
             personnes.Sort(new ComparatuerPersonnes());
             foreach (var p in personnes) WriteLine(p);
             WriteLine();
-
         }
     }
 }

@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace MyClasses.Autres
 {
-   public static class SampleDatas
+    public static class SampleDatas
     {
         public static List<Personne> GetSamplePersonnes()
         {
-            List<Personne> personnes = new List<Personne>();
+            List<Personne> personnes = new();
 
             var random = new Random();
 

@@ -10,38 +10,26 @@ namespace MesClasses.Exos
 {
     static class ExosLinq
     {
-        //        Sur une liste d’entier :
+        // Sur une liste d’entier :
         static List<int> liste = new List<int> { 8, 25, 2, 6, 3, 0, 10, 15, -5 };
 
         //1. Afficher la somme
-        public static void ExoL01()
-        {
-            WriteLine(liste.Sum());
-        }
+        public static void ExoL01() => WriteLine(liste.Sum());
 
         //2. Afficher la moyenne
-        public static void ExoL02()
-        {
-            WriteLine(liste.Average());
-        }
+        public static void ExoL02() => WriteLine(liste.Average());
+
         //3. Sélectionner que les nombres qui sont > 6
-        public static void ExoL03()
-        {
-            WriteLine(string.Join("\n", liste.Where(i => i > 6)));
-        }
+        public static void ExoL03() => WriteLine(string.Join("\n", liste.Where(i => i > 6)));
 
         //4. Compter le nombre d’élément
-        public static void ExoL04()
-        {
-            WriteLine(liste.Count());
-        }
+        public static void ExoL04() => WriteLine(liste.Count());
+
         //5. Les trier avec la méthode OrderBy par le nom puis le prénom
-        public static void ExoL05()
-        {
-            WriteLine(String.Join("\n", GetSamplePersonnes().OrderBy(p => p.Nom).ThenBy(p => p.Prenom)));
-        }
+        public static void ExoL05() => WriteLine(String.Join("\n", GetSamplePersonnes().OrderBy(p => p.Nom).ThenBy(p => p.Prenom)));
+
         //6. Afficher que les personnes qui ont leurs noms qui commence par D
-        public static void ExoL06() => WriteLine(String.Join("\n", GetSamplePersonnes().Where(p => p.Nom[0] == 'D')));
+        public static void ExoL06() => WriteLine(String.Join("\n", GetSamplePersonnes().Where(p => p.Nom.ToLower().StartsWith("d"))));
 
         //7. Afficher que les noms des personnes
         public static void ExoL07() => WriteLine(String.Join("\n", GetSamplePersonnes().Select(p => p.Nom)));
@@ -49,7 +37,7 @@ namespace MesClasses.Exos
         //8. Afficher le nom en majuscule et le prénom des personnes trié par ordre descendant sur le prénom dont leurs noms commence par D
         public static void ExoL08()
         {
-            var list = GetSamplePersonnes().Where(p => p.Nom[0] == 'D')
+            var list = GetSamplePersonnes().Where(p => p.Nom.ToLower().StartsWith("d"))
                   .OrderByDescending(p => p.Prenom)
                   .Select(p => new { Nom = p.Nom.ToUpper(), Prenom = p.Prenom });
 
@@ -73,15 +61,8 @@ namespace MesClasses.Exos
         //13. Regrouper les personnes par leurs prénoms
         public static void ExoL13()
         {
-            var groupe = GetSamplePersonnes().GroupBy(p => p.Prenom);
-
-            foreach (var item in groupe)
-            {
-                WriteLine(item.Key + " : \n" + String.Join("\n", item)+ "\n-.-\n");
-            }
+            foreach (var item in GetSamplePersonnes().GroupBy(p => p.Prenom))
+                WriteLine(item.Key + " : \n" + String.Join("\n", item) + "\n-.-\n");
         }
-
-
     }
-
 }

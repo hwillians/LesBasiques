@@ -12,10 +12,10 @@ namespace MesClasses.Autres
             nombre2 = GetInt("Deuxième valeur : ");
         }
 
-        public static DateTime StringToDate()
+        public static DateTime StringToDate(string message = "Tapez une date : ")
         {
             DateTime date;
-            var saisi = GetString("Tapez une date : ");
+            var saisi = GetString(message);
             while (!DateTime.TryParse(saisi, out date)) saisi = GetString("La saisie n'est pas valide : ");
             return date;
         }
