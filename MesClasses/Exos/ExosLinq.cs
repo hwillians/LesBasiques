@@ -53,22 +53,25 @@ namespace MesClasses.Exos
                   .OrderByDescending(p => p.Prenom)
                   .Select(p => new { Nom = p.Nom.ToUpper(), Prenom = p.Prenom });
 
-            foreach (var item in list)
-            {
-                WriteLine(item.Nom + " " + item.Prenom);
-
-            }
+            foreach (var item in list) WriteLine(item.Nom + " " + item.Prenom);
         }
 
         //9. Récupérer que les 2 première personne
+        public static void ExoL09() => WriteLine(String.Join("\n", GetSamplePersonnes().Take(2)));
 
         //10. Récupérer les personnes rentrées en 7ème 8ème et 9ème position
+        public static void ExoL10() => WriteLine(String.Join("\n", GetSamplePersonnes().Skip(6).Take(3)));
 
         //11. Récupérer la personne qui a le nom Dupont
+        public static void ExoL11() => WriteLine(GetSamplePersonnes().FirstOrDefault(p => p.Nom == "Dupont"));
 
         //12. Savoir si notre liste contient une personne dont le nom commence par D
+        public static void ExoL12() => WriteLine(GetSamplePersonnes().Any(p => p.Nom[0] == 'D') ?
+            "Contient une personne dont le nom commence par D" :
+            "Ne contient pas une personne dont le nom commence par D");
 
         //13. Regrouper les personnes par leurs prénoms
+        public static void ExoL13() => WriteLine(String.Join("\n", GetSamplePersonnes().Select(p => p.Prenom)));
 
     }
 

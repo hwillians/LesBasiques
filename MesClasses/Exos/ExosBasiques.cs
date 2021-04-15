@@ -140,7 +140,6 @@ namespace MesClasses.Exos
                     ligne += lettre;
                     tailleLigne++;
                 }
-
                 WriteLine(tab + ligne);
             }
         }

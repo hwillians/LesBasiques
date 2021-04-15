@@ -11,7 +11,7 @@ namespace MesClasses.Personnes
         public DateTime DateNaissance { get; set; }
         public static string Test { get; } = "Ceci est un test";
 
-        public Personne(string nom, string prenom, DateTime dateNaissance)
+        public Personne(string prenom, string nom, DateTime dateNaissance)
         {
             Prenom = prenom;
             Nom = nom;
@@ -22,7 +22,7 @@ namespace MesClasses.Personnes
 
         public override string ToString()
         {
-            return $"{Prenom} {Nom.ToUpper()} ({DateNaissance.ToString("dd/MM/yyyy")})";
+            return $"{Prenom} {Nom} ({DateNaissance.ToString("dd/MM/yyyy")})";
         }
 
         public virtual string Afficher()
@@ -30,16 +30,16 @@ namespace MesClasses.Personnes
             return $"Prenom : {Prenom}, Nom : {Nom}, Date de Naissance : {DateNaissance.ToString("dd/MM/yyyy")}";
         }
 
-        public override bool Equals(object obj)
-          {
-              if (this == obj) return true;
-              if (!(obj is Personne)) return false;
-              if (Prenom == ((Personne)obj).Prenom 
-                  && Nom == ((Personne)obj).Nom
-                  && DateNaissance.ToShortDateString() == ((Personne)obj).DateNaissance.ToShortDateString()) return true;
-              else return false;
-          }
-    
+       /* public override bool Equals(object obj)
+        {
+            if (this == obj) return true;
+            if (!(obj is Personne)) return false;
+            if (Prenom == ((Personne)obj).Prenom
+                && Nom == ((Personne)obj).Nom
+                && DateNaissance.ToShortDateString() == ((Personne)obj).DateNaissance.ToShortDateString()) return true;
+            else return false;
+        }*/
+
         public bool Equals(Personne other)
         {
             return other.Nom == Nom && other.Prenom == Prenom;
@@ -47,7 +47,7 @@ namespace MesClasses.Personnes
 
         public int CompareTo(Personne p)
         {
-           return Nom.CompareTo(p.Nom);
+            return Nom.CompareTo(p.Nom);
         }
     }
 }
