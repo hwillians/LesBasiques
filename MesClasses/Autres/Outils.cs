@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace MesClasses.Autres
 {
     public static class Outils

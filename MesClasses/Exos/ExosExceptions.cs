@@ -9,6 +9,12 @@ namespace MesClasses.Exos
     public static class ExosExceptions
     {
         // 7. Gérer la division par 0 par un try catch
+
+        public static double Diviser(int n1, int n2)
+        {
+            return n1 / n2;
+        }
+
         public static void ExoE01()
         {
             int n1, n2;

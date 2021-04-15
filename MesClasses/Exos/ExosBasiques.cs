@@ -1,7 +1,6 @@
 ﻿using System;
 using static MesClasses.Autres.Outils;
 using static System.Console;
-using System.Collections.Generic;
 
 namespace MesClasses.Exos
 {

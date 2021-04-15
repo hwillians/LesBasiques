@@ -1,9 +1,5 @@
 ﻿using MesClasses.Personnes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static MesClasses.Autres.Outils;
 
 namespace MesClasses.Exos

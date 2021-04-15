@@ -1,10 +1,10 @@
 ﻿using System;
+using static MesClasses.Autres.Outils;
 using static MesClasses.Exos.ExosBasiques;
 using static MesClasses.Exos.ExosClasses;
-using static MesClasses.Exos.ExosTables;
-using static MesClasses.Exos.ExosLinq;
 using static MesClasses.Exos.ExosExceptions;
-using static MesClasses.Autres.Outils;
+using static MesClasses.Exos.ExosLinq;
+using static MesClasses.Exos.ExosTables;
 
 
 
