@@ -10,6 +10,11 @@ namespace MesClasses.Personnes
         public DateTime DateNaissance { get; set; }
         public static string Test { get; } = "Ceci est un test";
 
+        public Personne()
+        {
+
+        }
+
         public Personne(string prenom, string nom, DateTime dateNaissance)
         {
             Prenom = prenom;

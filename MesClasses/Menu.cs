@@ -5,6 +5,7 @@ using static MesClasses.Exos.ExosClasses;
 using static MesClasses.Exos.ExosExceptions;
 using static MesClasses.Exos.ExosLinq;
 using static MesClasses.Exos.ExosTables;
+using static MesClasses.Exos.ExosIO;
 
 
 
@@ -21,7 +22,8 @@ namespace MesClasses
                     $"\nde 1 à 36 pour les basiques et les calsses" +
                     $"\nDe t01 à t06 pour les tables" +
                     $"\nDe l01 à l13 pour linq" +
-                    $"\n(00 por sortir)");
+                    $"\nDe e01 à e02 pour l'ecxeptions" +
+                    $"\n(00 por sortir) : ");
                 switch (exercices)
                 {
                     case "1": Exo1(); break;
@@ -81,11 +83,12 @@ namespace MesClasses
                     case "l13": ExoL13(); break;
                     case "e01": ExoE01(); break;
                     case "e02": ExoE02(); break;
-
+                    case "io01": ExoIO01(); break;
                     // case "300": Morpion(); break;
                     case "00": Console.WriteLine("à bientôt..."); break;
                     default: Console.WriteLine("Esseyez un autre exercices"); break;
                 }
+                Console.WriteLine();
             }
         }
     }

@@ -12,10 +12,8 @@ namespace MesClasses.Exos.Tests
             int j = 2;
 
             var r = ExosExceptions.Diviser(i, j);
-         
-            Assert.AreEqual(5,r);
+
+            Assert.AreEqual(5, r);
         }
-
-
     }
 }
