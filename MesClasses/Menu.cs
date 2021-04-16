@@ -84,6 +84,7 @@ namespace MesClasses
                     case "e01": ExoE01(); break;
                     case "e02": ExoE02(); break;
                     case "io01": ExoIO01(); break;
+                    case "io02": ExoIO02(); break;
                     // case "300": Morpion(); break;
                     case "00": Console.WriteLine("à bientôt..."); break;
                     default: Console.WriteLine("Esseyez un autre exercices"); break;

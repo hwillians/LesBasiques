@@ -22,7 +22,7 @@ namespace MesClasses.Exos
                 xmlSerializer.Serialize(stream, SampleDatas.GetSamplePersonnes());
             }
 
-            using (var stream = new FileStream("personne.xml",FileMode.Open,FileAccess.Read))
+            using (var stream = new FileStream("personne.xml", FileMode.Open, FileAccess.Read))
             {
                 var xmlSerializer = new XmlSerializer(typeof(List<Personne>));
                 var personnes = xmlSerializer.Deserialize(stream) as List<Personne>;
@@ -31,5 +31,21 @@ namespace MesClasses.Exos
             }
         }
 
+        public static void ExoIO02()
+        {
+            DirectoryInfo directoryInfo = new DirectoryInfo(@"e:\");
+            var fileAttributes = new EnumerationOptions();
+            fileAttributes.AttributesToSkip = (FileAttributes)2;
+            var niveau = 0;
+            var etape = 0;
+            Console.WriteLine(niveau + directoryInfo.Name);
+
+            ExtraireInfo(directoryInfo);
+
+            void ExtraireInfo(DirectoryInfo dir, int letape = 0)
+            {
+                //foreach (var item in DirectoryInfo.GetFiles()) Console.WriteLine("f : " + item.Name);
+            }
+        }
     }
 }
