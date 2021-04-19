@@ -27,25 +27,42 @@ namespace MesClasses.Exos
                 var xmlSerializer = new XmlSerializer(typeof(List<Personne>));
                 var personnes = xmlSerializer.Deserialize(stream) as List<Personne>;
 
-                foreach (var item in personnes) Console.WriteLine(item);
+                foreach (var p in personnes) Console.WriteLine(p);
             }
         }
 
-        public static void ExoIO02()
+        public static void ExoIO02() => ExtraireInfo(new DirectoryInfo(@"e:\test"), '-');
+
+        static void ExtraireInfo(DirectoryInfo dir, char separateur, int niveau = 0)
         {
-            DirectoryInfo directoryInfo = new DirectoryInfo(@"e:\");
             var fileAttributes = new EnumerationOptions();
             fileAttributes.AttributesToSkip = (FileAttributes)2;
-            var niveau = 0;
-            var etape = 0;
-            Console.WriteLine(niveau + directoryInfo.Name);
-
-            ExtraireInfo(directoryInfo);
-
-            void ExtraireInfo(DirectoryInfo dir, int letape = 0)
+            try
             {
-                //foreach (var item in DirectoryInfo.GetFiles()) Console.WriteLine("f : " + item.Name);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(Separateur(separateur, niveau) + dir.Name);
+                foreach (var dirFils in dir.GetDirectories("*", fileAttributes))
+                {
+                    ExtraireInfo(dirFils, separateur, ++niveau);
+                    --niveau;
+                }
+
+                Console.ForegroundColor = ConsoleColor.Blue;
+                foreach (var file in dir.GetFiles()) Console.WriteLine(Separateur(separateur, niveau + 1) + file.Name);
             }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(ex.Message);
+            }
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        static string Separateur(char separateur = '.', int niveau = 0)
+        {
+            var sep = "";
+            for (int i = 0; i < niveau; i++) sep += separateur;
+            return sep;
         }
     }
 }
