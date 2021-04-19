@@ -20,7 +20,9 @@ namespace MesClasses
                     $"\nde 1 à 36 pour les basiques et les calsses" +
                     $"\nDe t01 à t06 pour les tables" +
                     $"\nDe l01 à l13 pour linq" +
-                    $"\nDe e01 à e02 pour l'ecxeptions" +
+                    $"\nDe e01 à e02 pour les exceptions" +
+                    $"\nDe io01 à io02 pour IO" +
+                    $"\n300 morpion" +
                     $"\n(00 por sortir) : ");
                 switch (exercices.ToLower())
                 {

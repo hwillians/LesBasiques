@@ -30,16 +30,14 @@ namespace MesClasses.Exos
             WriteLine();
         }
 
-        static List<Personne> personnes = GetSamplePersonnes();
-
         public static void ExoT03()
         {
 
-            foreach (var p in personnes) WriteLine(p.ToString());
+            foreach (var p in GetSamplePersonnes()) WriteLine(p.ToString());
             WriteLine();
 
-            personnes.Sort();
-            foreach (var item in personnes) Write(item + ", ");
+            GetSamplePersonnes().Sort();
+            foreach (var item in GetSamplePersonnes()) Write(item + ", ");
             WriteLine();
         }
 
@@ -56,7 +54,7 @@ namespace MesClasses.Exos
 
         public static void ExoT05()
         {
-            if (personnes.Contains(new Personne("Rodriguez", "Zutano", new DateTime(1800, 04, 14))))
+            if (GetSamplePersonnes().Contains(new Personne("Rodriguez", "Zutano", new DateTime(1800, 04, 14))))
             {
                 WriteLine("La liste contiene cette personne");
             }
@@ -65,12 +63,12 @@ namespace MesClasses.Exos
 
         public static void ExoT06()
         {
-            personnes.Sort();
-            foreach (var p in personnes) WriteLine(p);
+            GetSamplePersonnes().Sort();
+            foreach (var p in GetSamplePersonnes()) WriteLine(p);
             WriteLine();
 
-            personnes.Sort(new ComparatuerPersonnes());
-            foreach (var p in personnes) WriteLine(p);
+            GetSamplePersonnes().Sort(new ComparatuerPersonnes());
+            foreach (var p in GetSamplePersonnes()) WriteLine(p);
             WriteLine();
         }
     }

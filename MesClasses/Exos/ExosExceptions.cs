@@ -8,17 +8,13 @@ namespace MesClasses.Exos
 {
     public static class ExosExceptions
     {
-        // 7. Gérer la division par 0 par un try catch
+        #region DivisionPar0
+        public static double Diviser(int n1, int n2) => n1 / n2;
 
-        public static double Diviser(int n1, int n2)
-        {
-            return n1 / n2;
-        }
 
         public static void ExoE01()
         {
-            int n1, n2;
-            DeuxNombres(out n1, out n2);
+            DeuxNombres(out int n1, out int n2);
             try
             {
                 WriteLine(n1 / n2);
@@ -28,6 +24,7 @@ namespace MesClasses.Exos
                 WriteLine(e.Message);
             }
         }
+        #endregion
 
         public static void ExoE02()
         {
