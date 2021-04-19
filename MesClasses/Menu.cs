@@ -3,17 +3,15 @@ using static MesClasses.Autres.Outils;
 using static MesClasses.Exos.ExosBasiques;
 using static MesClasses.Exos.ExosClasses;
 using static MesClasses.Exos.ExosExceptions;
+using static MesClasses.Exos.ExosIO;
 using static MesClasses.Exos.ExosLinq;
 using static MesClasses.Exos.ExosTables;
-using static MesClasses.Exos.ExosIO;
-
-
 
 namespace MesClasses
 {
     public static class Menu
     {
-        public static void Liste()
+        public static void Selection()
         {
             var exercices = "";
             while (exercices != "00")
@@ -24,10 +22,10 @@ namespace MesClasses
                     $"\nDe l01 à l13 pour linq" +
                     $"\nDe e01 à e02 pour l'ecxeptions" +
                     $"\n(00 por sortir) : ");
-                switch (exercices)
+                switch (exercices.ToLower())
                 {
                     case "1": Exo1(); break;
-                    case "2": Exo1(); break;
+                    case "2": Exo2(); break;
                     case "3": Exo3(); break;
                     case "4": Exo4(); break;
                     case "5": Exo5(); break;
@@ -85,7 +83,7 @@ namespace MesClasses
                     case "e02": ExoE02(); break;
                     case "io01": ExoIO01(); break;
                     case "io02": ExoIO02(); break;
-                    // case "300": Morpion(); break;
+                    case "300": Morpion(); break;
                     case "00": Console.WriteLine("à bientôt..."); break;
                     default: Console.WriteLine("Esseyez un autre exercices"); break;
                 }

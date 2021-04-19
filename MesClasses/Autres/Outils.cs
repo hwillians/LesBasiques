@@ -25,7 +25,12 @@ namespace MesClasses.Autres
             var valeur = GetString(question);
             while (!int.TryParse(valeur, out unEntier) || !(unEntier >= min && unEntier <= max))
             {
-                valeur = GetString("La saisie n'est pas valide.\n" + question);
+                string control;
+                if (unEntier < min) control = $"Le nombre doit être superior à {min}.";
+                else if (unEntier > max) control = $"Le nombre doit être inferieur à {max}.";
+                else control = "La saisie n'est pas valide.";
+
+                valeur = GetString($"{control}\n{question}");
             }
             return unEntier;
         }

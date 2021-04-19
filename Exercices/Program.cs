@@ -1,7 +1,4 @@
 ﻿using MesClasses;
-using static MesClasses.Autres.Outils;
-using System;
-using MesClasses.Exos;
 
 namespace Exercices
 {
@@ -9,8 +6,7 @@ namespace Exercices
     {
         static void Main(string[] args)
         {
-            Menu.Liste();
+            Menu.Selection();
         }
     }
 }
-
