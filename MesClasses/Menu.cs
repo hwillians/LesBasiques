@@ -23,6 +23,7 @@ namespace MesClasses
                     $"\nDe l01 à l13 pour linq" +
                     $"\nDe e01 à e02 pour les exceptions" +
                     $"\nDe io01 à io02 pour IO" +
+                    $"\nDe a01 à a04 pour les aspects avancés" +
                     $"\n300 morpion" +
                     $"\n(00 por sortir) : ");
                 switch (exercices.ToLower())
