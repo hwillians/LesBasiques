@@ -6,6 +6,7 @@ using static MesClasses.Exos.ExosExceptions;
 using static MesClasses.Exos.ExosIO;
 using static MesClasses.Exos.ExosLinq;
 using static MesClasses.Exos.ExosTables;
+using static MesClasses.Exos.AspectsAvances;
 
 namespace MesClasses
 {
@@ -85,6 +86,10 @@ namespace MesClasses
                     case "e02": ExoE02(); break;
                     case "io01": ExoIO01(); break;
                     case "io02": ExoIO02(); break;
+                    case "a01": ExoA01(); break;
+                    case "a02": ExoA02(); break;
+                    case "a03": ExoA03(); break;
+                    case "a04": ExoA04(); break;
                     case "300": Morpion(); break;
                     case "00": Console.WriteLine("à bientôt..."); break;
                     default: Console.WriteLine("Esseyez un autre exercices"); break;
