@@ -42,7 +42,6 @@ namespace MesClasses.Exos
                     ExtraireInfo(dirFils, separateur, ++niveau);
                     --niveau;
                 }
-
                 ForegroundColor = ConsoleColor.Blue;
                 foreach (var file in dir.GetFiles()) WriteLine(Separateur(separateur, niveau + 1) + file.Name);
             }

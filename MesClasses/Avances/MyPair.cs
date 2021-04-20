@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MesClasses.Avances
+﻿namespace MesClasses.Avances
 {
     class MyPair<T, U>
     {
@@ -16,7 +10,6 @@ namespace MesClasses.Avances
             First = first;
             Second = second;
         }
-
         public override string ToString() => $"Value 1 : {First} – Value 2 : {Second}";
     }
 }
